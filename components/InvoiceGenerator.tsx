@@ -41,15 +41,15 @@ export default function InvoiceGenerator() {
     };
 
     return (
-        <div className="min-h-screen bg-gray-50 p-4 md:p-8 font-sans text-slate-900">
+        <div className="min-h-screen bg-slate-100 p-4 md:p-8 font-sans text-slate-900">
 
             <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-8 h-full">
 
-                {/* LEFT COLUMN: EDITOR */}
+                {/* LEFT COLUMN: CONTROL PANEL */}
                 <div className="lg:col-span-4 flex flex-col gap-6 no-print">
-                    <div className="bg-white rounded-xl shadow-sm border border-gray-200 p-6">
+                    <div className="bg-white rounded-xl shadow-sm border border-slate-200 p-6">
                         <h1 className="text-2xl font-bold text-slate-800 mb-6 flex items-center gap-2">
-                            🧾 Facturitax <span className="text-xs font-normal text-slate-500 bg-slate-100 px-2 py-1 rounded-full">Editor</span>
+                            🧾 Facturitax <span className="text-xs font-normal text-slate-500 bg-slate-100 px-2 py-1 rounded-full border border-slate-200">Editor</span>
                         </h1>
 
                         <div className="space-y-5">
@@ -62,7 +62,7 @@ export default function InvoiceGenerator() {
                                         name="receiptNumber"
                                         value={data.receiptNumber}
                                         onChange={handleChange}
-                                        className="w-full p-2.5 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500/20 focus:border-blue-500 outline-none transition text-sm"
+                                        className="w-full p-2.5 border border-slate-300 rounded-lg focus:ring-2 focus:ring-blue-500/20 focus:border-blue-500 outline-none transition text-sm"
                                     />
                                 </div>
                                 <div>
@@ -72,7 +72,7 @@ export default function InvoiceGenerator() {
                                         name="date"
                                         value={data.date}
                                         onChange={handleChange}
-                                        className="w-full p-2.5 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500/20 focus:border-blue-500 outline-none transition text-sm"
+                                        className="w-full p-2.5 border border-slate-300 rounded-lg focus:ring-2 focus:ring-blue-500/20 focus:border-blue-500 outline-none transition text-sm"
                                     />
                                 </div>
                             </div>
@@ -86,7 +86,7 @@ export default function InvoiceGenerator() {
                                     placeholder="Ej: Juan Pérez"
                                     value={data.payerName}
                                     onChange={handleChange}
-                                    className="w-full p-2.5 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500/20 focus:border-blue-500 outline-none transition text-sm"
+                                    className="w-full p-2.5 border border-slate-300 rounded-lg focus:ring-2 focus:ring-blue-500/20 focus:border-blue-500 outline-none transition text-sm"
                                 />
                             </div>
 
@@ -99,7 +99,7 @@ export default function InvoiceGenerator() {
                                     placeholder="Ej: Diez mil pesos con 00/100"
                                     value={data.amountText}
                                     onChange={handleChange}
-                                    className="w-full p-2.5 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500/20 focus:border-blue-500 outline-none transition text-sm"
+                                    className="w-full p-2.5 border border-slate-300 rounded-lg focus:ring-2 focus:ring-blue-500/20 focus:border-blue-500 outline-none transition text-sm"
                                 />
                             </div>
 
@@ -107,13 +107,13 @@ export default function InvoiceGenerator() {
                             <div>
                                 <label className="block text-sm font-medium text-slate-700 mb-1">Monto ($)</label>
                                 <div className="relative">
-                                    <span className="absolute left-3 top-1/2 -translate-y-1/2 text-gray-500">$</span>
+                                    <span className="absolute left-3 top-1/2 -translate-y-1/2 text-slate-500">$</span>
                                     <input
                                         type="number"
                                         name="amountNum"
                                         value={data.amountNum}
                                         onChange={handleChange}
-                                        className="w-full pl-7 p-2.5 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500/20 focus:border-blue-500 outline-none transition text-sm font-mono"
+                                        className="w-full pl-7 p-2.5 border border-slate-300 rounded-lg focus:ring-2 focus:ring-blue-500/20 focus:border-blue-500 outline-none transition text-sm font-mono"
                                     />
                                 </div>
                             </div>
@@ -127,24 +127,24 @@ export default function InvoiceGenerator() {
                                     placeholder="Ej: Alquiler mes..."
                                     value={data.concept}
                                     onChange={handleChange}
-                                    className="w-full p-2.5 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500/20 focus:border-blue-500 outline-none transition resize-none text-sm"
+                                    className="w-full p-2.5 border border-slate-300 rounded-lg focus:ring-2 focus:ring-blue-500/20 focus:border-blue-500 outline-none transition resize-none text-sm"
                                 />
                             </div>
 
                             {/* Signature Name */}
-                            <div className="bg-blue-50/50 p-4 rounded-lg border border-blue-100">
-                                <label className="block text-sm font-semibold text-blue-900 mb-1">Firma Digital</label>
+                            <div className="bg-slate-50 p-4 rounded-lg border border-slate-200">
+                                <label className="block text-sm font-semibold text-slate-800 mb-1">Firma Digital</label>
                                 <input
                                     type="text"
                                     name="signatureName"
                                     placeholder="Nombre y Apellido"
                                     value={data.signatureName}
                                     onChange={handleChange}
-                                    className="w-full p-2.5 border border-blue-200 rounded-lg focus:ring-2 focus:ring-blue-500/20 focus:border-blue-500 outline-none transition text-blue-900 text-sm"
+                                    className="w-full p-2.5 border border-slate-300 rounded-lg focus:ring-2 focus:ring-blue-500/20 focus:border-blue-500 outline-none transition text-slate-800 text-sm"
                                 />
-                                <p className="text-[10px] text-blue-600 mt-1.5 flex items-center gap-1">
+                                <p className="text-[10px] text-slate-500 mt-1.5 flex items-center gap-1">
                                     <span className="inline-block w-1.5 h-1.5 bg-blue-400 rounded-full"></span>
-                                    Se transformará en letra cursiva
+                                    Se transformará en letra cursiva (Great Vibes)
                                 </p>
                             </div>
                         </div>
@@ -157,11 +157,11 @@ export default function InvoiceGenerator() {
                             className="flex-1 bg-slate-900 text-white py-3.5 px-4 rounded-xl hover:bg-slate-800 hover:shadow-lg hover:-translate-y-0.5 transition-all flex items-center justify-center gap-2 font-medium shadow-md"
                         >
                             <Printer size={18} />
-                            Imprimir
+                            Imprimir Recibo
                         </button>
                         <button
                             onClick={() => setData(initialData)}
-                            className="p-3.5 text-slate-600 bg-white hover:bg-slate-50 rounded-xl border border-gray-200 shadow-sm hover:shadow transition-all"
+                            className="p-3.5 text-slate-600 bg-white hover:bg-slate-50 rounded-xl border border-slate-200 shadow-sm hover:shadow transition-all"
                             title="Resetear formulario"
                         >
                             <RefreshCw size={18} />
@@ -170,13 +170,13 @@ export default function InvoiceGenerator() {
                 </div>
 
                 {/* RIGHT COLUMN: PREVIEW */}
-                <div className="lg:col-span-8 bg-gray-200/50 rounded-xl border border-dashed border-gray-300 p-8 flex items-start justify-center overflow-auto print:bg-white print:p-0 print:border-none print:w-full print:block print:overflow-visible">
+                <div className="lg:col-span-8 flex items-start justify-center overflow-auto print:bg-white print:p-0 print:w-full print:block print:overflow-visible">
 
                     {/* RECEIPT CONTAINER - This is what gets printed */}
-                    <div className="receipt-print-area bg-white text-black shadow-2xl w-[850px] min-h-[500px] p-12 border border-gray-100 print:shadow-none print:border-none print:w-full relative mx-auto">
+                    <div className="receipt-print-area bg-white text-black shadow-xl w-[850px] min-h-[500px] p-8 border border-gray-100 print:shadow-none print:border-none print:w-full relative mx-auto rounded-sm">
 
                         {/* Header X */}
-                        <div className="flex justify-between items-start mb-10 relative border-b-2 border-black pb-6">
+                        <div className="flex justify-between items-start mb-10 relative border-b border-gray-800 pb-6">
                             {/* Left Header */}
                             <div className="w-1/3 pt-2">
                                 <div className="font-bold text-2xl tracking-widest mb-1">RECIBO</div>
@@ -184,7 +184,7 @@ export default function InvoiceGenerator() {
                             </div>
 
                             {/* Center X Box */}
-                            <div className="absolute left-1/2 top-0 -translate-x-1/2 w-14 h-14 bg-black text-white flex items-center justify-center text-3xl font-bold rounded shadow-sm">
+                            <div className="absolute left-1/2 top-0 -translate-x-1/2 w-12 h-12 bg-black text-white flex items-center justify-center text-3xl font-bold rounded-sm shadow-sm">
                                 X
                             </div>
 
@@ -198,24 +198,24 @@ export default function InvoiceGenerator() {
                         </div>
 
                         {/* Body - CSS GRID LAYOUT */}
-                        <div className="grid grid-cols-[auto_1fr] gap-x-6 gap-y-8 text-lg items-baseline mb-12">
+                        <div className="grid grid-cols-[auto_1fr] gap-x-6 gap-y-10 text-lg items-baseline mb-12">
 
                             {/* Recibí de */}
                             <div className="text-right font-bold text-slate-800 whitespace-nowrap">Recibí de:</div>
                             <div className="border-b border-gray-300 pb-1 px-2 font-medium text-slate-900">
-                                {data.payerName || "..................................................."}
+                                {data.payerName || ""}
                             </div>
 
                             {/* La cantidad de */}
                             <div className="text-right font-bold text-slate-800 whitespace-nowrap">La cantidad de pesos:</div>
-                            <div className="border-b border-gray-300 pb-1 px-2 italic text-slate-700 bg-gray-50/50 print:bg-transparent">
-                                {data.amountText || "..................................................."}
+                            <div className="border-b border-gray-300 pb-1 px-2 italic text-slate-700">
+                                {data.amountText || ""}
                             </div>
 
                             {/* Concepto */}
                             <div className="text-right font-bold text-slate-800 whitespace-nowrap self-start mt-2">En concepto de:</div>
-                            <div className="p-3 border border-gray-200 rounded bg-gray-50 text-base leading-relaxed text-slate-700 min-h-[96px] print:bg-transparent print:border-gray-300">
-                                {data.concept || "..."}
+                            <div className="p-3 border border-gray-200 bg-gray-50/50 text-base leading-relaxed text-slate-700 min-h-[100px] print:bg-transparent print:border-gray-300 rounded-sm">
+                                {data.concept || ""}
                             </div>
 
                         </div>
@@ -225,41 +225,41 @@ export default function InvoiceGenerator() {
 
                             {/* Total Section */}
                             <div className="flex flex-col items-start gap-2">
-                                <span className="text-sm text-gray-500 font-bold uppercase tracking-wider">Total</span>
+                                <span className="text-xs text-gray-500 font-bold uppercase tracking-wider">Total</span>
                                 <div className="flex items-center gap-3">
                                     <span className="font-bold text-xl text-slate-800">Son: $</span>
-                                    <div className="border border-gray-300 bg-gray-50 px-6 py-2 text-2xl font-bold text-slate-900 min-w-[180px] shadow-sm print:shadow-none print:border-black print:bg-transparent">
+                                    <div className="border border-gray-300 bg-gray-50 px-6 py-2 text-2xl font-bold text-slate-900 min-w-[180px] print:shadow-none print:border-black print:bg-transparent rounded-sm">
                                         {data.amountNum.toLocaleString("es-AR", { minimumFractionDigits: 2 })}
                                     </div>
                                 </div>
                             </div>
 
-                            {/* Signature Section */}
+                            {/* Signature Section - PRESERVE THIS */}
                             <div className="flex flex-col items-center justify-end relative h-32">
                                 {/* Dynamic Signature */}
                                 {data.signatureName && (
-                                    <div className="absolute bottom-6 left-1/2 -translate-x-1/2 w-full text-center text-4xl text-blue-900 font-signature transform -rotate-2 mix-blend-multiply z-10 print:text-black">
+                                    <div className="absolute bottom-6 left-1/2 -translate-x-1/2 w-full text-center text-5xl text-blue-900 font-signature transform -rotate-2 mix-blend-multiply z-10 print:text-black leading-none">
                                         {data.signatureName}
                                     </div>
                                 )}
 
-                                <div className="border-t border-slate-800 w-full pt-2 text-center z-0">
-                                    <p className="text-xs uppercase font-bold tracking-widest text-slate-600">Firma y Aclaración</p>
+                                <div className="border-t border-gray-800 w-full pt-2 text-center z-0">
+                                    <p className="text-[10px] uppercase font-bold tracking-widest text-slate-600">Firma y Aclaración</p>
                                 </div>
                             </div>
 
                         </div>
 
                         {/* Branding */}
-                        <div className="absolute bottom-3 left-12 text-[9px] text-gray-300 print:hidden font-mono">
-                            Facturitax App
+                        <div className="absolute bottom-3 left-8 text-[9px] text-gray-300 print:hidden font-mono uppercase tracking-widest">
+                            Facturitax
                         </div>
 
                     </div>
 
                     {/* Floating Print Hint */}
-                    <div className="absolute bottom-8 left-1/2 -translate-x-1/2 text-gray-400 text-xs print:hidden bg-white/80 px-4 py-2 rounded-full shadow backdrop-blur-sm border border-gray-100 cursor-default hover:text-gray-600 transition">
-                        Vista previa de impresión
+                    <div className="fixed bottom-8 left-1/2 -translate-x-1/2 lg:translate-x-0 lg:left-auto lg:right-12 text-gray-400 text-xs print:hidden bg-white/90 px-4 py-2 rounded-full shadow-sm border border-gray-200 cursor-default">
+                        Vista previa
                     </div>
 
                 </div>

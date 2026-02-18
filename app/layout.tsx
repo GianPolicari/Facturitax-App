@@ -21,7 +21,7 @@ export default function RootLayout({
 }>) {
     return (
         <html lang="es">
-            <body className={`${inter.className} ${greatVibes.variable} antialiased bg-gray-50 min-h-screen text-slate-900`}>
+            <body className={`${inter.className} ${greatVibes.variable} antialiased bg-slate-100 min-h-screen text-slate-900`}>
                 {children}
             </body>
         </html>
