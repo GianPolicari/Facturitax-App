@@ -1,0 +1,50 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    :root {
+        --background: 0 0% 100%;
+        --foreground: 222.2 84% 4.9%;
+        --border: 214.3 31.8% 91.4%;
+        --input: 214.3 31.8% 91.4%;
+        --ring: 222.2 84% 4.9%;
+    }
+}
+
+@layer utilities {
+    .text-balance {
+        text-wrap: balance;
+    }
+}
+
+/* Print Styles - CRITICAL for Facturitax */
+@media print {
+    @page {
+        margin: 0;
+        size: auto;
+    }
+
+    /* Hide everything by default using visibility, but keep layout for absolute positioning if needed */
+    body {
+        visibility: hidden;
+    }
+
+    /* Only show the receipt print area */
+    .receipt-print-area {
+        visibility: visible;
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        margin: 0;
+        padding: 0;
+        display: block !important;
+        /* Ensure it's block */
+        background: white;
+        -webkit-print-color-adjust: exact !important;
+        print-color-adjust: exact !important;
+    }
+
+    /* Hide scrollbars, navs, etc explicitly if needed (visibility hidden usually handles it) */
+}
